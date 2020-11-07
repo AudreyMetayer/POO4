@@ -6,14 +6,13 @@ require_once 'MotorWay.php';
 
 $carOne = new Car('blue', 4, 'fuel');
 $carOne->getHasParkBrake();
-
-$carTwo = new Car('white', 3, 'electric');
-$carTwo->getHasParkBrake();
-
-$carOne->setParkBrake(true);
+$carOne->setHasParkBrake(true);
 $carOne->start();
 echo '<br>';
 
-$carTwo->setParkBrake(false);
+
+$carTwo = new Car('white', 3, 'electric');
+$carTwo->getHasParkBrake();
+$carTwo->setHasParkBrake(false);
 $carTwo->start();
-echo "<pre>";
+echo '<br>';
