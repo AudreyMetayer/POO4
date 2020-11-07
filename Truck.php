@@ -21,7 +21,7 @@ class Truck extends Vehicle
         if ($this->storageCapacity === $this->load){
             return 'Full';
         } else {
-            return 'Not full, you can load again !';
+            return 'Not full, you can load again ! ' . '</br>';
         }
     }
 
@@ -55,9 +55,9 @@ class Truck extends Vehicle
         $this->storageCapacity = $storageCapacity;
     }
 
-    public function getLoad(): int
+    public function getLoad()
     {
-        return $this->load;
+        return 'You are at ' . $this->load . 'kg. ' . '</br>' . $this->fullLoad();
     }
 
     public function setLoad(int $load): void

@@ -4,17 +4,25 @@ require_once 'Car.php';
 require_once 'Truck.php';
 require_once 'MotorWay.php';
 
+$carOne = new Car('blue', 4, 'fuel');
+$carOne->getHasParkBrake();
 
-$truck = new Truck('black', 3, 'diesel', 850);
-echo $truck->fullLoad();
+try {
+    echo $carOne->start();
+} catch(Exception $e){
+    $carOne->getHasParkBrake(false);
+}finally{
+    echo "Ma voiture roule comme un donut </br>";
+}
 
-$truck->setLoad(250);
-echo $truck->getLoad();
-echo $truck->fullLoad();
 
+$carTwo = new Car('white', 3, 'electric');
+$carTwo->getHasParkBrake();
 
-$highRoad = new MotorWay();
-$highRoad->addVehicle($truck);
-echo '<pre>';
-var_dump($highRoad);
-
+try {
+    echo $carTwo->start();
+} catch(Exception $e){
+    $carTwo->getHasParkBrake(false);
+}finally{
+    echo "Ma voiture roule comme un donut ";
+}
