@@ -5,7 +5,7 @@ class Vehicle
 {
 
     private $color;
-    private $currentSpeed;
+    public $currentSpeed;
     private $nbSeats;
     private $nbWheels;
 
